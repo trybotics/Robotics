@@ -12,6 +12,8 @@ int main()
 		ls=PINC&0b0001000;
 		if((rs==0b0000001)&(ls==0b0001000)) {
 			PORTB=0b00001100;  //forward
+			PORTB=0b00000000;  //Stop
+			_delay_ms(100); //Speed
 		}
 		if((rs==0b0000000)&(ls==0b0001000)) {
 			PORTB=0b00010100;  //left
